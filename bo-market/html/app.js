@@ -12,10 +12,7 @@ const app = new Vue({
     
     data: {
         show: false,
-        items: [
-          { itemname: 'sandwich', label: 'Sandwich', category:'Food', price: 3},
-          { itemname: 'coffe', label: 'Kahve', category:'Items', price: 4},
-        ],
+        items: [],
         selectedCategory: 'All',
         SepetItems : [],
         totalprice: 0,
