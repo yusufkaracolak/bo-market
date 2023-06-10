@@ -9,7 +9,6 @@ window.addEventListener("message", function (event) {
 
 const app = new Vue({
   el: "#app",
-  
   data: {
       show: false,
       items: [],
