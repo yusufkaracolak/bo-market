@@ -21,7 +21,6 @@ function OpenUI()
     SetNuiFocus(true, true)
     SendNUIMessage({
         type = "OpenUI",
-        Items = Config.Items
     })
 end
 
@@ -30,7 +29,6 @@ function CloseNUI()
 end
 
 function Satinalindi(data)
-    SetNuiFocus(false, false)
     TriggerServerEvent("bo-market-server:additem", data)
 end
 
@@ -38,9 +36,18 @@ function Error(data)
     QBCore.Functions.Notify(data, "error", 2000)
 end
 
+function CallItems(data, cb)
+    cb(
+        {
+            config = Config.Items,
+        }
+    )
+end
+
 RegisterNUICallback("Error", Error)
 RegisterNUICallback("CloseNUI", CloseNUI)
 RegisterNUICallback("Satinalindi", Satinalindi)
+RegisterNUICallback("CallItems", CallItems)
 
 DrawText3D = function (msg, coords)
     AddTextEntry('esxFloatingHelpNotification', msg)
