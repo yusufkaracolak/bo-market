@@ -9,8 +9,6 @@ files {
     'html/*.css',
     'html/index.html',
     'html/*.js',
-    'html/img/*.png',
-    'html/img/*.jpg',
 }
 
 client_scripts {
